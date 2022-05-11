@@ -1,0 +1,113 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(4, 10, 65);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.clock {
+  width: 30rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 10px solid rgb(9, 18, 99);
+  color: white;
+  position: relative;
+  box-shadow: inset 0 0 1em 0 rgb(0, 0, 0, 0.8),
+    0 0 2em 0 rgb(255, 255, 255, 0.1);
+}
+
+.clock .number {
+  --rotate: 0deg;
+  position: absolute;
+  font-size: 2rem;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotate));
+}
+.clock .number-1 {
+  --rotate: 30deg;
+}
+.clock .number-2 {
+  --rotate: 60deg;
+}
+.clock .number-3 {
+  --rotate: 90deg;
+}
+.clock .number-4 {
+  --rotate: 120deg;
+}
+.clock .number-5 {
+  --rotate: 150deg;
+}
+.clock .number-6 {
+  --rotate: 180deg;
+}
+.clock .number-7 {
+  --rotate: 210deg;
+}
+.clock .number-8 {
+  --rotate: 240deg;
+}
+.clock .number-9 {
+  --rotate: 270deg;
+}
+.clock .number-10 {
+  --rotate: 300deg;
+}
+.clock .number-11 {
+  --rotate: 330deg;
+}
+.clock .number-12 {
+  --rotate: 360deg;
+}
+.clock .hand {
+  --rotate: 0;
+  position: absolute;
+  background-color: black;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(calc(var(--rotate) * 1deg));
+  transform-origin: bottom;
+}
+.clock .hour {
+  width: 12px;
+  height: 33%;
+  border-radius: 20px 20px 0 0;
+  z-index: 10;
+  border: 1px solid white;
+}
+.clock .minute {
+  width: 7px;
+  height: 38%;
+  border-radius: 20px 20px 0 0;
+  z-index: 11;
+  background-color: rgb(0, 0, 123);
+  border: 1px solid white;
+}
+.clock .second {
+  width: 5px;
+  height: 42%;
+  border-radius: 50% 50% 0 0;
+  z-index: 12;
+  background-color: rgb(223, 17, 120);
+  border: 1px solid white;
+}
+.clock::after {
+  content: "";
+  width: 2rem;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(82, 95, 211);
+  box-shadow: 0 0 2em 0 rgb(0, 0, 0, 0.8);
+  z-index: 13;
+  border-radius: 50%;
+}
