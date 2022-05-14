@@ -1,3 +1,5 @@
+// Youtube Javascript Logic
+
 setInterval(setClock, 100);
 
 const hourHand = document.querySelector("[data-hour-hand]");
